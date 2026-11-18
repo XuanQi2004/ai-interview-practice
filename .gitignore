@@ -11,3 +11,5 @@ interview-practice*.json
 __pycache__/
 .DS_Store
 dist/
+
+面试练习进度-*.json
