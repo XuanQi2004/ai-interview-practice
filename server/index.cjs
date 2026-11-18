@@ -110,7 +110,7 @@ function createApp(options = {}) {
         throw httpError(403, '请从本机平台页面发起请求。');
       }
       if (req.method === 'GET') {
-        if (api === '/api/identity') return sendJson(res, { app: 'interview-coding-lab' });
+        if (api === '/api/identity') return sendJson(res, { app: 'ai-interview-practice' });
         if (api === '/api/problems') return sendJson(res, { problems: publicProblems });
         if (api === '/api/tutorials') return sendJson(res, { tutorials });
         if (api === '/api/catalog') return sendJson(res, { items: catalog });
@@ -197,7 +197,7 @@ function createApp(options = {}) {
 
 if (require.main === module) {
   const server = createApp();
-  const port = Number(process.env.PORT || 4173);
+  const port = Number(process.env.PORT || 4174);
   server.on('error', err => {
     console.error(err.code === 'EADDRINUSE' ? '该端口正在使用，可通过 PORT 环境变量指定另一个端口。' : err.message);
     process.exitCode = 1;

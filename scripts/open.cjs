@@ -5,12 +5,12 @@ const path = require('node:path');
 const { setTimeout: delay } = require('node:timers/promises');
 
 const repo = path.resolve(__dirname, '..');
-const url = 'http://127.0.0.1:' + (process.env.PORT || 4173);
+const url = 'http://127.0.0.1:' + (process.env.PORT || 4174);
 
 async function isRunning() {
   try {
     const reply = await fetch(url + '/api/identity', { signal: AbortSignal.timeout(1000) });
-    return reply.ok && (await reply.json()).app === 'interview-coding-lab';
+    return reply.ok && (await reply.json()).app === 'ai-interview-practice';
   } catch { return false; }
 }
 

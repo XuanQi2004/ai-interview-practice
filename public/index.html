@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="referrer" content="no-referrer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#143e33" />
+    <title>面试练习室 · 练习工作台</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23143e33'/%3E%3Cpath d='m7 10 6 6-6 6m9 0h8' fill='none' stroke='%23def292' stroke-width='3'/%3E%3C/svg%3E"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <a href="#main" class="skip">跳到主要内容</a>
+    <div class="layout">
+      <aside class="sidebar">
+        <a class="brand" href="#home" aria-label="面试练习室首页"
+          ><span class="brand-icon" aria-hidden="true">❯<b>_</b></span
+          ><strong>面试练习室</strong></a
+        >
+        <nav class="side-nav" aria-label="主导航" id="side-nav"></nav>
+        <div class="side-bottom">
+          <div class="local-icon" id="local-icon"></div>
+          <div>
+            <strong>个人工作空间</strong
+            ><small id="storage-location">本机存储</small>
+          </div>
+        </div>
+      </aside>
+      <div class="workspace">
+        <header class="topbar">
+          <div class="crumb">
+            <span id="space-location">个人工作空间</span><i>/</i
+            ><b id="crumb">练习工作台</b>
+          </div>
+          <a href="#sync" class="top-sync" id="top-sync"></a>
+        </header>
+        <main id="main" tabindex="-1">
+          <p class="loading">正在读取题库和练习记录…</p>
+        </main>
+      </div>
+    </div>
+    <div id="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>
