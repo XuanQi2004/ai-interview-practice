@@ -1,0 +1,13 @@
+node_modules/
+.venv/
+.interview-data/
+.env
+.env.*
+*.pem
+*.key
+*.log
+interview-progress*.json
+interview-practice*.json
+__pycache__/
+.DS_Store
+dist/
