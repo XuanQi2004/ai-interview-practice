@@ -1048,7 +1048,7 @@ function localEntry(label, primary = false, id = "") {
   return `<a ${id ? 'id="' + id + '"' : ""} class="button ${primary ? "primary" : ""}" href="${esc("http://127.0.0.1:4174/" + hash)}" target="_blank" rel="noopener noreferrer">${esc(label)} ${icon("out")}</a>`;
 }
 function localSetup() {
-  return "在本机项目目录运行 <code>npm start</code> 后，打开本机版。";
+  return "按" + link("本机安装说明", "https://github.com/XuanQi2004/ai-interview-practice#启动本机版") + "下载项目，运行 <code>npm start</code> 即可打开。";
 }
 function handoffChat(tutorial) {
   const sourceText = tutorial
